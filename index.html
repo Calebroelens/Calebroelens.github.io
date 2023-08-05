@@ -1,0 +1,145 @@
+<html lang="en" style="height: auto;">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CallippooCraft</title>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">
+    <link rel="stylesheet" href="style/fontawesome.css">
+    <link rel="stylesheet" href="style/adminlte.min.css">
+    <script src="script/jquery.min.js"></script>
+    <script src="script/adminlte.min.js"></script>
+    <script src="script/mcapi.js"></script>
+    <script src="script/index.js"></script>
+</head>
+<body class="sidebar-mini layout-fixed" style="height: auto;">
+<div class="wrapper">
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <a href="index.html" class="brand-link">
+            <img src="img/mc_logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+                 style="opacity: .8">
+            <span class="brand-text font-weight-light">CallippooCraft</span>
+        </a>
+        <div class="sidebar">
+            <nav class="mt-2">
+                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                    data-accordion="false">
+                    <li class="nav-item menu-open">
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link active">
+                                    <i class="far fa-house fa-solid nav-icon"></i>
+                                    <p>Home</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="nav-icon fas fa-solid fa-earth-europe"></i>
+                                    <p>
+                                        Worlds
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="overworld.html" class="nav-link">
+                                            <i class="far fa-mountain-city fa-solid nav-icon"></i>
+                                            <p>Overworld</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="nether.html" class="nav-link">
+                                            <i class="far fa-solid fa-fire-flame-curved nav-icon"></i>
+                                            <p>Nether</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="the_end.html" class="nav-link">
+                                            <i class="far fa-solid fa-e nav-icon"></i>
+                                            <p>The End</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="poi.html" class="nav-link">
+                                    <i class="far fa-map-location-dot fa-solid nav-icon"></i>
+                                    <p>POI</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="seedmap.html" class="nav-link">
+                                    <i class="far fa-map fa-solid nav-icon"></i>
+                                    <p>Seedmap</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+    <div class="content-wrapper" style="min-height: 823px;">
+        <div class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content" style="padding-right: 20px;">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Server information</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="info-box">
+                            <span class="info-box-icon bg-info"><i class="far fa-server fa-solid"></i></span>
+                            <div class="info-box-content">
+                                <span class="info-box-text">Server version</span>
+                                <span class="info-box-number" id="server_version">1.20.1</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="info-box">
+                            <span class="info-box-icon bg-success"><i class="far fa-user fa-solid"></i></span>
+                            <div class="info-box-content">
+                                <span class="info-box-text">Online players</span>
+                                <span class="info-box-number" id="player_count">0/20</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="info-box">
+                            <span class="info-box-icon">
+                                <img alt="" src="https://mc-heads.net/avatar/CabMatEvy" class="rounded" style="max-height: 64px;"/>
+                            </span>
+                            <div class="info-box-content">
+                                <span class="info-box-text">Server Administrator</span>
+                                <span class="info-box-number">CabMatEvy</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Online players</h2>
+                    </div>
+
+                </div>
+                <div class="row" id="player_list">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sidebar-overlay"></div>
+</div>
+</body>
+</html>
