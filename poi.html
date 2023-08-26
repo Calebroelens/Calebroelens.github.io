@@ -12,6 +12,19 @@
     <script src="script/jquery.min.js"></script>
     <script src="script/adminlte.min.js"></script>
     <script src="script/mcapi.js"></script>
+    <style>
+        .minecraft_item {
+            box-shadow: 0 1px 2px rgba(0,0,0,.075);
+            border-radius: 0.25rem;
+            background-color: #fff;
+            border: 1px solid #dee2e6;
+            display: -ms-flexbox;
+            display: flex;
+            margin-right: 1rem;
+            max-width: 4rem;
+            padding: 0.5rem;
+        }
+    </style>
 </head>
 <body class="sidebar-mini layout-fixed" style="height: auto;">
 <div class="wrapper">
@@ -98,109 +111,299 @@
         </div>
         <div class="content" style="padding-right: 20px;">
             <div class="container-fluid">
-                <h5 class="mb-2">Player bases</h5>
                 <div class="row">
-                    <div class="col-md-3 col-sm-6 col-12">
-                        <div class="info-box">
-                            <span class="info-box-icon bg-info"><i class="far fa-solid fa-tree-city"></i></span>
-                            <div class="info-box-content">
-                                <span class="info-box-number">CabMatEvy & 0_Fiery_0</span>
-                                <span class="info-box-text">
-                                    <strong>X:</strong> 1209
-                                    <strong>Y:</strong> 120
-                                    <strong>Z:</strong> 1514
-                                </span>
-                                <span class="info-box-text">Overworld</span>
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header bg-info">
+                                <i class="far fa-solid fa-tree-city"></i> Player bases
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-12">
-                        <div class="info-box">
-                            <span class="info-box-icon bg-info"><i class="far fa-solid fa-tree-city"></i></span>
-                            <div class="info-box-content">
-                                <span class="info-box-number">DaddyMarvel</span>
-                                <span class="info-box-text">
-                                    <strong>X:</strong> 3530
-                                    <strong>Y:</strong> 67
-                                    <strong>Z:</strong> -2055
-                                </span>
-                                <span class="info-box-text">Overworld</span>
+                            <div class="card-body">
+                                <table class="table table-bordered table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>World</th>
+                                        <th>X</th>
+                                        <th>Y</th>
+                                        <th>Z</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr data-widget="expandable-table" aria-expanded="false">
+                                        <td>CabMatEvy & 0_Fiery_0</td>
+                                        <td>Overworld</td>
+                                        <td>1209</td>
+                                        <td>120</td>
+                                        <td>1514</td>
+                                    </tr>
+                                    <tr class="expandable-body d-none">
+                                        <td colspan="5">
+                                            <p style="display: none;">
+                                                A large base containing a bee farm, villager hall, iron golem farm, a space station and a vault. It has a setup skeleton grinder and spider grinder.
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr data-widget="expandable-table" aria-expanded="false">
+                                        <td>DaddyMarvel</td>
+                                        <td>Overworld</td>
+                                        <td>3530</td>
+                                        <td>67</td>
+                                        <td>-2055</td>
+                                    </tr>
+                                    <tr class="expandable-body d-none">
+                                        <td colspan="5">
+                                            <p style="display: none;">
+                                               Description to be added
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
                 </div>
-                <h5 class="mb-2">Nether portals</h5>
                 <div class="row">
-                    <div class="col-md-3 col-sm-6 col-12">
-                        <div class="info-box">
-                            <span class="info-box-icon bg-purple"><i class="far fa-solid fa-door-open"></i></span>
-                            <div class="info-box-content">
-                                <span class="info-box-number">CabMatEvy & 0_Fiery_0</span>
-                                <span class="info-box-text">
-                                    <strong>X:</strong> 1179
-                                    <strong>Y:</strong> 80
-                                    <strong>Z:</strong> 1480
-                                </span>
-                                <span class="info-box-text">Overworld</span>
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header bg-purple">
+                                <i class="far fa-solid fa-door-open"></i> Nether portals
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-bordered table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>World</th>
+                                        <th>X</th>
+                                        <th>Y</th>
+                                        <th>Z</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr data-widget="expandable-table" aria-expanded="false">
+                                        <td>CabMatEvy & 0_Fiery_0</td>
+                                        <td>Overworld</td>
+                                        <td>1179</td>
+                                        <td>80</td>
+                                        <td>1480</td>
+                                    </tr>
+                                    <tr class="expandable-body d-none">
+                                        <td colspan="5">
+                                            <p style="display: none;">
+                                                Main portal leading to the base of CabMatEvy & 0_Fiery_0
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr data-widget="expandable-table" aria-expanded="false">
+                                        <td>Minethias</td>
+                                        <td>Overworld</td>
+                                        <td>1784</td>
+                                        <td>?</td>
+                                        <td>-4424</td>
+                                    </tr>
+                                    <tr class="expandable-body d-none">
+                                        <td colspan="5">
+                                            <p style="display: none;">
+                                                Main portal leading to the base of Minethias. Nether roof portal located at 223 -553
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
                 </div>
-                <h5 class="mb-2">Farms</h5>
                 <div class="row">
-                    <div class="col-md-3 col-sm-6 col-12">
-                        <div class="info-box">
-                            <span class="info-box-icon bg-yellow"><i class="far fa-solid fa-gem"></i></span>
-                            <div class="info-box-content">
-                                <span class="info-box-number">Villager Trading Hall</span>
-                                <span class="info-box-text">
-                                    <strong>X:</strong> 1154
-                                    <strong>Y:</strong> 72
-                                    <strong>Z:</strong> 1367
-                                </span>
-                                <span class="info-box-text">Overworld</span>
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header bg-yellow">
+                                <i class="far fa-solid fa-industry"></i> Farms
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-12">
-                        <div class="info-box">
-                            <span class="info-box-icon bg-yellow"><i class="far fa-solid fa-cube"></i></span>
-                            <div class="info-box-content">
-                                <span class="info-box-number">Iron Farm</span>
-                                <span class="info-box-text">
-                                    <strong>X:</strong> 1229
-                                    <strong>Y:</strong> 71
-                                    <strong>Z:</strong> 1338
-                                </span>
-                                <span class="info-box-text">Overworld</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-12">
-                        <div class="info-box">
-                            <span class="info-box-icon bg-yellow"><i class="far fa-solid fa-e"></i></span>
-                            <div class="info-box-content">
-                                <span class="info-box-number">Enderman Farm</span>
-                                <span class="info-box-text">
-                                    <strong>X:</strong> 27
-                                    <strong>Y:</strong> ?
-                                    <strong>Z:</strong> 202
-                                </span>
-                                <span class="info-box-text">The end</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-12">
-                        <div class="info-box">
-                            <span class="info-box-icon bg-yellow"><i class="far fa-solid fa-explosion"></i></span>
-                            <div class="info-box-content">
-                                <span class="info-box-number">Creeper Farm</span>
-                                <span class="info-box-text">
-                                    <strong>X:</strong> 3448
-                                    <strong>Y:</strong> 63
-                                    <strong>Z:</strong> -2056
-                                </span>
-                                <span class="info-box-text">Overworld</span>
+                            <div class="card-body">
+                                <table class="table table-bordered table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>Items</th>
+                                        <th>Maintainer</th>
+                                        <th>Name</th>
+                                        <th>World</th>
+                                        <th>X</th>
+                                        <th>Y</th>
+                                        <th>Z</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr data-widget="expandable-table" aria-expanded="false">
+                                        <td>
+                                            <div class="d-flex">
+                                                <img class="minecraft_item" src="assets/minecraft_icons/iron_ingot.webp" alt="Iron ingot">
+                                                <img class="minecraft_item" src="assets/minecraft_icons/poppy.webp" alt="Poppies">
+                                            </div>
+                                        </td>
+                                        <td>CabMatEvy</td>
+                                        <td>Iron Golem Farm</td>
+                                        <td>Overworld</td>
+                                        <td>1179</td>
+                                        <td>80</td>
+                                        <td>1480</td>
+                                    </tr>
+                                    <tr class="expandable-body d-none">
+                                        <td colspan="7">
+                                            <p style="display: none;">
+                                                Iron golem farm build by CabMatEvy. Good rates. Free to use.
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr data-widget="expandable-table" aria-expanded="false">
+                                        <td>
+                                            <div class="d-flex">
+                                                <img class="minecraft_item" src="assets/minecraft_icons/enderpearl.webp" alt="Enderpearl">
+                                                <img class="minecraft_item" src="assets/minecraft_icons/exp_orb.webp" alt="XP orb">
+                                            </div>
+                                        </td>
+                                        <td></td>
+                                        <td>Enderman Farm</td>
+                                        <td>The End</td>
+                                        <td>27</td>
+                                        <td>?</td>
+                                        <td>202</td>
+                                    </tr>
+                                    <tr class="expandable-body d-none">
+                                        <td colspan="7">
+                                            <p style="display: none;">
+                                                Enderfarm with automatic enderpearl trashing. Easy XP
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr data-widget="expandable-table" aria-expanded="false">
+                                        <td>
+                                            <div class="d-flex">
+                                                <img class="minecraft_item" src="assets/minecraft_icons/gun_powder.webp" alt="Gunpower">
+                                            </div>
+                                        </td>
+                                        <td></td>
+                                        <td>Creeper Farm</td>
+                                        <td>Overworld</td>
+                                        <td>3448</td>
+                                        <td>63</td>
+                                        <td>-2056</td>
+                                    </tr>
+                                    <tr class="expandable-body d-none">
+                                        <td colspan="7">
+                                            <p style="display: none;">
+                                                Creeper farm for easy rockets
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr data-widget="expandable-table" aria-expanded="false">
+                                        <td>
+                                            <div class="d-flex">
+                                                <img class="minecraft_item" src="assets/minecraft_icons/emerald.webp" alt="Emerald">
+                                                <img class="minecraft_item" src="assets/minecraft_icons/ebook.webp" alt="Ebook">
+                                                <img class="minecraft_item" src="assets/minecraft_icons/helmet.webp" alt="Helmet">
+                                                <img class="minecraft_item" src="assets/minecraft_icons/pickaxe.webp" alt="Pickaxe">
+                                            </div>
+                                        </td>
+                                        <td>CabMatEvy</td>
+                                        <td>Villager hall</td>
+                                        <td>Overworld</td>
+                                        <td>1154</td>
+                                        <td>72</td>
+                                        <td>1367</td>
+                                    </tr>
+                                    <tr class="expandable-body d-none">
+                                        <td colspan="7">
+                                            <p style="display: none;">
+                                                Villager trading hall with cured villagers. Has various trades for cheap books, tools & armor.
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr data-widget="expandable-table" aria-expanded="false">
+                                        <td>
+                                            <div class="d-flex">
+                                                <img class="minecraft_item" src="assets/minecraft_icons/slimeball.webp" alt="Slimeball">
+                                            </div>
+                                        </td>
+                                        <td>Minethias</td>
+                                        <td>Slime Farm</td>
+                                        <td>Overworld</td>
+                                        <td>2500</td>
+                                        <td>?</td>
+                                        <td>350</td>
+                                    </tr>
+                                    <tr class="expandable-body d-none">
+                                        <td colspan="7">
+                                            <p style="display: none;">
+                                                Slime ball farm
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr data-widget="expandable-table" aria-expanded="false">
+                                        <td>
+                                            <div class="d-flex">
+                                                <img class="minecraft_item" src="assets/minecraft_icons/shulker.webp" alt="Slimeball">
+                                            </div>
+                                        </td>
+                                        <td>CabMatEvy</td>
+                                        <td>Shulker Farm</td>
+                                        <td>The end</td>
+                                        <td>?</td>
+                                        <td>?</td>
+                                        <td>?</td>
+                                    </tr>
+                                    <tr class="expandable-body d-none">
+                                        <td colspan="7">
+                                            <p style="display: none;">
+                                                Shulker farm. Not very fast, but still produces more boxes than you will ever need.
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr data-widget="expandable-table" aria-expanded="false">
+                                        <td>
+                                            <div class="d-flex">
+                                                <img class="minecraft_item" src="assets/minecraft_icons/pork.webp" alt="Pork">
+                                                <img class="minecraft_item" src="assets/minecraft_icons/leather.webp" alt="Leather">
+                                            </div>
+                                        </td>
+                                        <td>Minethias</td>
+                                        <td><strong>KEBAB</strong></td>
+                                        <td>Nether roof</td>
+                                        <td>223</td>
+                                        <td>128</td>
+                                        <td>-553</td>
+                                    </tr>
+                                    <tr class="expandable-body d-none">
+                                        <td colspan="7">
+                                            <p style="display: none;">
+                                                Hoglin farm. Gives tons of cooked food and leather.
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr data-widget="expandable-table" aria-expanded="false">
+                                        <td>
+                                            <div class="d-flex">
+                                                <img class="minecraft_item" src="assets/minecraft_icons/emerald.webp" alt="Pork">
+                                                <img class="minecraft_item" src="assets/minecraft_icons/totem.webp" alt="Leather">
+                                            </div>
+                                        </td>
+                                        <td></td>
+                                        <td>Raid farm</td>
+                                        <td>Overworld</td>
+                                        <td>395</td>
+                                        <td>?</td>
+                                        <td>1259</td>
+                                    </tr>
+                                    <tr class="expandable-body d-none">
+                                        <td colspan="7">
+                                            <p style="display: none;">
+                                                Raid farm dropping tons of emerald and totems of undying.
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
@@ -208,12 +411,6 @@
             </div>
         </div>
     </div>
-    <footer class="main-footer">
-        <div class="float-right d-none d-sm-inline">
-            Created by and for CallippooCraft
-        </div>
-        <strong>Copyright © 2023 Caleb Roelens. Maps by unmined. Skins by Craftar. UUID by Mojang</strong> All rights reserved.
-    </footer>
     <div id="sidebar-overlay"></div>
     </div>
 </body>
