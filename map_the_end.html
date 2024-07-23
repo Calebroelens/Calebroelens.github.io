@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CallippooCraft</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.1/css/bulma.min.css">
+    <link rel="stylesheet" href="style/extra.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script/jquery.min.js"></script>
+    <!-- Unmined library package -->
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.9.0/css/ol.css"
+          integrity="sha256-jckPZk66EJrEBQXnJ5QC2bD+GxWPDRVVoMGr5vrMZvM=" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.9.0/build/ol.js"
+            integrity="sha256-77dogUPZ1WVoK9BDF0CxsKnAouX3YzK6n4tIcbDgtFI=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="worlds/the_end/unmined.map.properties.js"></script>
+    <script type="text/javascript" src="worlds/the_end/unmined.map.regions.js"></script>
+    <script type="text/javascript" src="worlds/the_end/unmined.map.players.js"></script>
+    <script type="text/javascript" src="worlds/the_end/unmined.openlayers.js"></script>
+</head>
+<body>
+<nav class="navbar" role="navigation" aria-label="main navigation" data-theme="dark">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="184" height="184" viewBox="0 0 184 184" version="1.1">
+                <path d="M 67.230 36.500 L 63.015 45 67.507 45 C 69.978 45, 72 45.245, 72 45.545 C 72 45.845, 66.182 68.008, 59.070 94.795 C 51.959 121.583, 46.023 144.400, 45.879 145.500 C 45.447 148.797, 46.827 151.467, 49.903 153.284 C 52.456 154.792, 56.096 155, 79.894 155 L 106.980 155 111.500 146 L 116.020 137 93.510 137 C 81.130 137, 71 136.887, 71.001 136.750 C 71.002 136.613, 76.174 117.150, 82.495 93.500 L 93.989 50.500 91.469 48.442 C 90.083 47.310, 89.261 46.073, 89.641 45.692 C 90.022 45.311, 96.783 45, 104.667 45 C 115.476 45, 118.996 45.307, 118.983 46.250 C 118.973 46.938, 118.094 50.858, 117.028 54.962 C 115.962 59.066, 115.290 62.624, 115.535 62.868 C 116.059 63.392, 137.409 59.013, 138.710 58.115 C 139.803 57.360, 145 38.048, 145 34.740 C 145 33.425, 143.958 31.370, 142.686 30.174 C 140.402 28.029, 139.916 28, 105.908 28 L 71.446 28 67.230 36.500"
+                      stroke="none" fill="#f9d805" fill-rule="evenodd"/>
+                <path d="M -0 92.005 L -0 184.010 92.250 183.755 L 184.500 183.500 184.755 91.750 L 185.010 0 92.505 0 L 0 0 -0 92.005 M 0.479 92.500 C 0.479 143.100, 0.601 163.947, 0.750 138.826 C 0.898 113.705, 0.898 72.305, 0.750 46.826 C 0.601 21.347, 0.479 41.900, 0.479 92.500 M 67.230 36.500 L 63.015 45 67.507 45 C 69.978 45, 72 45.245, 72 45.545 C 72 45.845, 66.182 68.008, 59.070 94.795 C 51.959 121.583, 46.023 144.400, 45.879 145.500 C 45.447 148.797, 46.827 151.467, 49.903 153.284 C 52.456 154.792, 56.096 155, 79.894 155 L 106.980 155 111.500 146 L 116.020 137 93.510 137 C 81.130 137, 71 136.887, 71.001 136.750 C 71.002 136.613, 76.174 117.150, 82.495 93.500 L 93.989 50.500 91.469 48.442 C 90.083 47.310, 89.261 46.073, 89.641 45.692 C 90.022 45.311, 96.783 45, 104.667 45 C 115.476 45, 118.996 45.307, 118.983 46.250 C 118.973 46.938, 118.094 50.858, 117.028 54.962 C 115.962 59.066, 115.290 62.624, 115.535 62.868 C 116.059 63.392, 137.409 59.013, 138.710 58.115 C 139.803 57.360, 145 38.048, 145 34.740 C 145 33.425, 143.958 31.370, 142.686 30.174 C 140.402 28.029, 139.916 28, 105.908 28 L 71.446 28 67.230 36.500"
+                      stroke="none" fill="#04147c" fill-rule="evenodd"/>
+            </svg>
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item" href="index.html">
+                <img src="images/home.webp" alt="Home">&nbsp;
+                Home
+            </a>
+            <a class="navbar-item" href="locations.html">
+                <img src="images/compass.gif" alt="Compass">&nbsp;
+                Locations
+            </a>
+            <!--            <a class="navbar-item" href="shops.html">-->
+            <!--                <img src="images/emerald.webp" alt="Emerald">&nbsp;-->
+            <!--                Shops-->
+            <!--            </a>-->
+            <a class="navbar-item" href="map.html">
+                <img src="images/map.webp" alt="Map">&nbsp;
+                Map
+            </a>
+            <a class="navbar-item" href="info.html">
+                <img src="images/book.webp" alt="Info">&nbsp;
+                Info
+            </a>
+        </div>
+    </div>
+</nav>
+<section class="section hero is-danger">
+    <div class="container">
+        <h1 class="title">
+            The End
+        </h1>
+        <p class="subtitle">
+            <a href="map.html" class="button mt-2">View other map</a>
+        </p>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+        <style>
+            .mouseposition {
+                background-color: white;
+                padding: 3px;
+                text-align: right;
+            }
+            .mousepositioncoord {
+                min-width: 40px;
+                display: inline-block;
+            }
+
+            div.ol-mouse-position {
+                background-color: white;
+                padding: 6px;
+                border-radius: 3px;
+                box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.2);
+            }
+            div#map {
+                height: 500px;
+            }
+        </style>
+        <div id="map">
+        </div>
+        <script type="text/javascript">
+            document.title = UnminedMapProperties.worldName + " - " + document.title;
+
+            // if (UnminedCustomMarkers && UnminedCustomMarkers.isEnabled && UnminedCustomMarkers.markers) {
+            //     UnminedMapProperties.markers = UnminedMapProperties.markers.concat(UnminedCustomMarkers.markers);
+            // }
+
+            let unmined = new Unmined();
+
+            if (UnminedPlayers && UnminedPlayers.length > 0) {
+                UnminedMapProperties.markers = UnminedMapProperties.markers.concat(unmined.createPlayerMarkers(UnminedPlayers));
+            }
+            let map = unmined.map('map', UnminedMapProperties, UnminedRegions);
+            $("#map").css("height", $(window).height() * 0.7);
+            window.dispatchEvent(new Event('resize'));
+        </script>
+    </div>
+</section>
+</body>
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            <strong>CallippooCraft</strong> by <a href="https://github.com/calebroelens">calebroelens</a>.
+        </p>
+    </div>
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+        // Add a click event on each of them
+        $navbarBurgers.forEach(el => {
+            el.addEventListener('click', () => {
+
+                // Get the target from the "data-target" attribute
+                const target = el.dataset.target;
+                const $target = document.getElementById(target);
+
+                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                el.classList.toggle('is-active');
+                $target.classList.toggle('is-active');
+
+            });
+        });
+    });
+</script>
+</html>

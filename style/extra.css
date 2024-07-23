@@ -1,0 +1,8 @@
+.navbar-item {
+    display: flex;
+    align-items: center;
+}
+.columns-same-height {
+    display: table;
+    width: 100%;
+}
